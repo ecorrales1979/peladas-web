@@ -1,4 +1,9 @@
+import { useNavigate } from 'react-router-dom';
+import { Button } from '../../components/button';
+
 export function Home() {
+  const navigate = useNavigate();
+
   return (
     <div className="flex flex-wrap flex-row justify-center items-center h-screen">
       <div className="w-full md:w-1/2 flex justify-center items-center p-5">
@@ -26,18 +31,8 @@ export function Home() {
         </p>
 
         <div className="flex flex-row pb-10 justify-center md:justify-start gap-7">
-          <a
-            className="rounded-full hover:scale-105 bg-transparent dark:text-white border border-gray-300 px-4 py-2 hover:bg-gray-200 hover:text-gray-800 hover:border-gray-400 hover:shadow-lg transform transition-all duration-300"
-            href="/login"
-          >
-            Entrar
-          </a>
-          <a
-            className="rounded-full hover:scale-105 bg-transparent dark:text-white border border-gray-300 px-4 py-2 hover:bg-gray-200 hover:text-gray-800 hover:border-gray-400 hover:shadow-lg transform transition-all duration-300"
-            href="/cadastro"
-          >
-            Criar Conta
-          </a>
+          <Button onClick={() => navigate('/login')}>Entrar</Button>
+          <Button onClick={() => navigate('/cadastro')}>Criar Conta</Button>
         </div>
       </div>
     </div>

@@ -1,3 +1,5 @@
+import { Button } from '../../components/button';
+
 export function Login() {
   return (
     <div className="flex justify-center items-center w-full h-screen">
@@ -47,12 +49,7 @@ export function Login() {
           </div>
 
           <div className="mt-4 flex justify-center">
-            <button
-              className="rounded-full hover:scale-105 bg-transparent dark:text-white border border-gray-300 px-4 py-2 hover:bg-gray-200 hover:text-gray-800 hover:border-gray-400 hover:shadow-lg transform transition-all duration-300"
-              type="submit"
-            >
-              Enviar
-            </button>
+            <Button type="submit">Enviar</Button>
           </div>
         </form>
       </div>
