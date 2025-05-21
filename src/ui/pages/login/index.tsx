@@ -1,4 +1,5 @@
 import { Button } from '../../components/button';
+import { Input } from '../../components/input/input';
 
 export function Login() {
   return (
@@ -13,38 +14,13 @@ export function Login() {
 
           <div className="flex flex-col gap-2 mb-5 items-center">
             <div className="relative sm:w-96 md:w-2/5 w-80">
-              <input
-                type="text"
-                id="email"
-                name="email"
-                className="peer w-full h-10 px-2 border-b-2 dark:border-amber-300 placeholder-transparent dark:bg-[#18181b]"
-                placeholder=""
-                value=""
-              />
-              <label
-                htmlFor="email"
-                className="absolute left-2 -top-3 text-gray-500 transition-all duration-200 transform origin-left scale-75 bg-slate-100 dark:bg-[#18181b] px-1 peer-placeholder-shown:px-0 peer-placeholder-shown:top-2 peer-placeholder-shown:scale-100"
-              >
-                E-mail
-              </label>
+              <Input type="text" name="email" label="E-mail" />
             </div>
           </div>
 
           <div className="flex flex-col gap-2 mb-8 items-center">
             <div className="relative sm:w-96 md:w-2/5 w-80">
-              <input
-                type="password"
-                id="password"
-                name="password"
-                className="peer w-full h-10 px-2 border-b-2 dark:border-amber-300 placeholder-transparent dark:bg-[#18181b]"
-                placeholder=" "
-              />
-              <label
-                htmlFor="password"
-                className="absolute left-2 -top-3 text-gray-500 transition-all duration-200 transform origin-left scale-75 bg-slate-100 dark:bg-[#1c1917] px-1 peer-placeholder-shown:px-0 peer-placeholder-shown:top-2 peer-placeholder-shown:scale-100"
-              >
-                Senha
-              </label>
+              <Input type="password" name="password" label="Senha" />
             </div>
           </div>
 
