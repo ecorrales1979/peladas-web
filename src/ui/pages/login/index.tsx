@@ -1,7 +1,12 @@
+import { useNavigate } from 'react-router-dom';
 import { Button } from '../../components/button';
 import { Input } from '../../components/input/input';
 
 export function Login() {
+  const navigate = useNavigate();
+
+  const handleBack = () => navigate(-1);
+
   return (
     <div className="flex justify-center items-center w-full h-screen">
       <div className="container max-w-[900px]">
@@ -25,6 +30,7 @@ export function Login() {
           </div>
 
           <div className="mt-4 flex justify-center">
+            <Button onClick={handleBack}>Voltar</Button>
             <Button type="submit">Enviar</Button>
           </div>
         </form>
