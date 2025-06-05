@@ -3,7 +3,7 @@ import type { ButtonHTMLAttributes } from 'react';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
-export function Button({ children, ...rest }: ButtonProps) {
+export function Button({ children, type, ...rest }: ButtonProps) {
   return (
     <button
       className={clsx(
@@ -13,6 +13,7 @@ export function Button({ children, ...rest }: ButtonProps) {
         'hover:bg-right',
         'transition-[background-position] duration-300 ease-out'
       )}
+      type={type ?? 'button'}
       {...rest}
     >
       {children}
